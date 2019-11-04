@@ -112,10 +112,8 @@
 	}
 	// Mail Header
 	.message-header {
-		border-bottom: 1px solid lighten(@isaac-dark; 80%);
-		font-size: 1em;
 		position: relative;
-		padding: 20px 0;
+		padding: 19px 0; // Dark background
 		&::before {
 			position: absolute;
 			top: 0;
@@ -128,21 +126,12 @@
 			border-radius: @base-border-radius @base-border-radius 0 0;
 			z-index: -9999;
 		}
-		// .header-toggle-control img {
-		// 	zoom: 0.4 !important;
-		// }
-		.message-participants {
-			.from-contact,
-			.participant-primary {
-				color: @isaac-dark;
-			}
-		}
 	}
 	.message-subject-wrap {
 		margin: 0 auto 20px;
 		.message-subject {
 			color: @white;
-			font-size: 1.857em;
+			font-size: 1.65em;
 			font-weight: bold;
 		}
 		.message-icons-wrap {
@@ -155,65 +144,21 @@
 			}
 		}
 	}
-	// Message Body
 	.message-item-wrap {
-		padding-bottom: 20px;
 		.message-item-white-wrap {
-			background: @white;
-			border-radius: @base-border-radius;
-			color: @isaac-dark;
-			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 1px 25px rgba(0, 0, 0, 0.05);
-
+			background: lighten(@isaac-dark, 2%);
+			color: @isaac-light;
 			&.composer-outer-wrap {
-				background: lighten(@isaac-dark, 5%) !important;
-
+				background: darken(@isaac-dark, 2%) !important;
 				&.focused {
 					box-shadow: none;
 				}
-				.RichEditor-root {
-					background-color: transparent;
-					border-color: darken(@isaac-light, 40%);
-					padding-top: 10px;
-				}
-				.RichEditor-toolbar {
-					border-bottom: 1px solid darken(@isaac-light, 40%);
-					opacity: 1 !important;
-					height: 50px !important;
-					width: 100% !important;
-					.inner {
-						background: transparent !important;
-						max-width: 568px;
-						margin: auto;
-					}
-					.floating-container {
-						background-color: lighten(@isaac-dark, 5%);
-						border-bottom: 1px solid darken(@isaac-light, 40%);
-						min-height: 40px;
-						padding: 12px 0;
-					}
-					.divider {
-						border-right: none;
-					}
-				}
-				.RichEditor-content {
-					color: @white !important;
-					padding-top: 20px;
-				}
-			}
-			.iframe-container {
-				margin-bottom: 20px;
-			}
-			.quoted-text-control {
-				border-radius: @base-border-radius;
 			}
 		}
 		&.collapsed {
 			.message-item-white-wrap {
-				background-color: lighten(@isaac-dark, 5%);
+				background: darken(@isaac-dark, 2%);
 				color: darken(@isaac-light, 20%);
-				.message-item-area {
-					font-size: 1em;
-				}
 			}
 		}
 	}
